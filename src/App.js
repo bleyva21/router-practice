@@ -1,7 +1,7 @@
 import About from './About.js'
 import Shop from './Shop.js'
 import Nav from './Nav.js'
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import React from 'react';
 import './App.css';
 
@@ -11,8 +11,10 @@ class App extends React.Component {
     return (
       <div className="App">
           <Nav />
-          <Shop />
-          <About /> 
+          <Route path="/home" Component={Home}/>
+          <Route path="/products" Component={Products}/>
+          <Route path="/cart" Component={}/>
+          <Route path="/checkout" Component={Home}/>
       </div>
     );
   }
